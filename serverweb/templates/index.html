@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Los Pollos Hermanos</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/static/img/indexback.jpg');
+             /* Ajoutez l'URL de votre image de fond ici */
+            background-size: cover;
+            color: #333;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 3em;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        a {
+            font-size: 1.2em;
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.9);
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #000000;
+        }
+        .content {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Welcome to Los Pollos Hermanos</h1>
+        <a href="/register">Register</a> | <a href="/login">Login</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Los Pollos Hermanos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2; /* Couleur de fond */
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff; /* Blanc pour la boîte */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 800px; /* Largeur maximale de la boîte */
+            width: 80%;
+            box-sizing: border-box;
+            margin-top: 30px; /* Espacement par rapport au titre */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #2c3e50; /* Couleur foncée pour le titre */
+            margin-bottom: 20px;
+        }
+
+        .plats-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .plat {
+            width: 200px; /* Largeur fixe pour chaque plat */
+            height: 200px; /* Hauteur fixe pour chaque plat */
+            margin: 10px;
+            text-align: center;
+            overflow: hidden; /* Empêche le débordement des images */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .plat img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Assure que l'image remplit le conteneur sans déformation */
+            border-radius: 10px;
+        }
+
+        .plat label {
+            display: block;
+            cursor: pointer;
+            position: relative;
+            padding: 0;
+            margin: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .plat label:hover {
+            transform: scale(1.05); /* Effet d'agrandissement au survol */
+        }
+
+        .submit-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #3498db; /* Bleu pour le bouton */
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1.2em;
+        }
+
+        .submit-btn:hover {
+            background-color: #2980b9; /* Couleur plus foncée au survol */
+        }
+
+        p.message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #27ae60; /* Couleur verte pour le message */
+        }
+
+        a {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #3498db; /* Couleur bleue au survol du lien */
+        }
+    </style>
+</head>
+<body>
+    <h1>Shop</h1>
+    <p>Vous avez {{ coins }} wings.</p>
+    <div class="container">
+        <h2>Choisissez votre plat - 200 points le plat</h2>
+        <form action="/shop" method="POST">
+            <div class="plats-container">
+                <div class="plat">
+                    <label for="plat1">
+                        <input type="radio" id="plat1" name="plat" value="echo 'Plat classique - 200 coins'">
+                        <img src="{{url_for('static',filename='img/menu classique.jpg')}}" alt="Plat 1">
+                    </label>
+                </div>
+                <div class="plat">
+                    <label for="plat2">
+                        <input type="radio" id="plat2" name="plat" value="echo 'Bucket - 200 coins'">
+                        <img src="{{url_for('static',filename='img/bucket.jpg')}}" alt="Plat 2">
+                    </label>
+                </div>
+                <div class="plat">
+                    <label for="plat3">
+                        <input type="radio" id="plat3" name="plat" value="echo '3 wraps - 200 coins'">
+                        <img src="{{url_for('static',filename='img/wraps.jpg')}}" alt="Plat 3">
+                    </label>
+                </div>
+                <div class="plat">
+                    <label for="plat4">
+                        <input type="radio" id="plat4" name="plat" value="echo 'familia - 200 coins'">
+                        <img src="{{url_for('static',filename='img/los pollos fiestas.jpeg')}}" alt="Plat 4">
+                    </label>
+                </div>
+                <div class="plat">
+                    <label for="plat5">
+                        <input type="radio" id="plat5" name="plat" value="echo 'tacos - 200 coins'">
+                        <img src="{{url_for('static',filename='img/tacos.jpg')}}" alt="Plat 5">
+                    </label>
+                </div>
+                <div class="plat">
+                    <label for="plat6">
+                        <input type="radio" id="plat6" name="plat" value="echo 'salad - 200 coins'">
+                        <img src="{{url_for('static',filename='img/salad.jpg')}}" alt="Plat 6">
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">Envoyer</button>
+        </form>
+    </div>
+    <p class="message">{{ message | safe }}</p>
+    <a href="/profile">Home</a>
+</body>
+</html>
