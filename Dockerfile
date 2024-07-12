@@ -10,6 +10,7 @@ RUN apt install -y python3 python3-pip sudo gdb coreutils nano ssh
 RUN useradd Tyrus
 RUN useradd -m mike
 COPY Mike /home/mike
+COPY root.txt /root
 RUN gcc /home/mike/message.c -o /home/mike/message -fno-stack-protector -z execstack -no-pie
 
 RUN echo 'mike:Password123' | chpasswd
