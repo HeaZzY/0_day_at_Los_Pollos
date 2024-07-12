@@ -48,4 +48,6 @@ If Docker is not already installed on your machine, follow the steps below to in
    sudo docker-compose up
    ```
 
+Good CTF !
+
    
