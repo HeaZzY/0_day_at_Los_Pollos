@@ -1,8 +1,8 @@
-# 0 day at Los Pollos
+# Los_Pwnnos_Hermanos
 
 ## Introduction
 
-Welcome to the "0 day at Los Pollos" CTF. This challenge takes place in the famous Los Pollos Hermanos restaurant and includes several stages of exploiting security vulnerabilities, including access control flaws, privileged account access, and buffer overflows.
+Welcome to the "Los_Pwnnos_Hermanos" CTF. This challenge takes place in the famous Los Pollos Hermanos restaurant and includes several stages of exploiting security vulnerabilities, including access control flaws, privileged account access, and buffer overflows.
 
 ## Prerequisites
 
@@ -30,12 +30,12 @@ If Docker is not already installed on your machine, follow the steps below to in
 
 3. **git clone the CTF**
    ```bash
-    sudo giti clone https://github.com/HeaZzY/0_day_at_Los_Pollos.git
+    sudo giti clone https://github.com/HeaZzY/Los_Pwnnos_Hermanos.git
     ```
    
 4. **Switch directory**
    ```bash
-   cd 0_day_at_Los_Pollos
+   cd Los_Pwnnos_Hermanos
    ```
    
 5. **Build the docker**
