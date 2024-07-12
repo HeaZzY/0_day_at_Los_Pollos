@@ -79,7 +79,7 @@ def shop():
             username = session['username']
             coins = get_coins(username)
             if coins >= 10:
-                delete_coins(username, 10)
+                delete_coins(username, 200)
                 plat = request.form.get('plat')  # Récupère la valeur de 'plat' du formulaire POST
                 print(plat)
                 # Utilisation de Markup pour rendre la valeur de plat sûre (échappement automatique)
