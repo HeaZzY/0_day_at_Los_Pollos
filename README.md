@@ -4,6 +4,10 @@
 
 Welcome to the "Los_Pwnnos_Hermanos" CTF. This challenge takes place in the famous Los Pollos Hermanos restaurant and includes several stages of exploiting security vulnerabilities, including access control flaws, privileged account access, and buffer overflows.
 
+## Write up
+The write up available here : https://leptitpentester.com/ctf/pollos/pollos2.html
+You can choose for English or French version
+
 ## Prerequisites
 
 Before starting, make sure you have the following installed on your Debian virtual machine:
