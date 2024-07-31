@@ -34,7 +34,7 @@ If Docker is not already installed on your machine, follow the steps below to in
 
 3. **git clone the CTF**
    ```bash
-    sudo giti clone https://github.com/HeaZzY/Los_Pwnnos_Hermanos.git
+    sudo git clone https://github.com/HeaZzY/Los_Pwnnos_Hermanos.git
     ```
    
 4. **Switch directory**
